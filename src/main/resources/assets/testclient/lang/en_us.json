@@ -6,5 +6,9 @@
   "key.testclient.fullbright": "Toggle Fullbright",
   "key.testclient.sprint": "Toggle Sprint",
   "key.testclient.esp": "Toggle ESP",
-  "key.testclient.step": "Toggle Step"
+  "key.testclient.step": "Toggle Step",
+  "key.testclient.killaura": "Toggle KillAura",
+  "key.testclient.nofall": "Toggle NoFall",
+  "key.testclient.spider": "Toggle Spider",
+  "key.testclient.autojump": "Toggle AutoJump"
 }
