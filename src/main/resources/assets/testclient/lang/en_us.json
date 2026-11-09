@@ -1,0 +1,7 @@
+{
+  "category.testclient": "Test Client",
+  "key.testclient.fly": "Toggle Fly",
+  "key.testclient.speed": "Toggle Speed",
+  "key.testclient.fullbright": "Toggle Fullbright",
+  "key.testclient.sprint": "Toggle Sprint"
+}
