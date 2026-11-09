@@ -17,5 +17,12 @@
   "key.testclient.scaffold": "Toggle Scaffold",
   "key.testclient.glide": "Toggle Glide",
   "key.testclient.highjump": "Toggle HighJump",
-  "key.testclient.antiafk": "Toggle AntiAFK"
+  "key.testclient.antiafk": "Toggle AntiAFK",
+  "key.testclient.autoclicker": "Toggle AutoClicker",
+  "key.testclient.autotool": "Toggle AutoTool",
+  "key.testclient.autowalk": "Toggle AutoWalk",
+  "key.testclient.jetpack": "Toggle Jetpack",
+  "key.testclient.airjump": "Toggle AirJump",
+  "key.testclient.autorespawn": "Toggle AutoRespawn",
+  "key.testclient.autototem": "Toggle AutoTotem"
 }

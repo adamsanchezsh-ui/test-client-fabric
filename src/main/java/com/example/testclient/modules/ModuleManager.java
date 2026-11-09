@@ -26,6 +26,13 @@ public class ModuleManager {
 		modules.add(new GlideModule());
 		modules.add(new HighJumpModule());
 		modules.add(new AntiAfkModule());
+		modules.add(new AutoClickerModule());
+		modules.add(new AutoToolModule());
+		modules.add(new AutoWalkModule());
+		modules.add(new JetpackModule());
+		modules.add(new AirJumpModule());
+		modules.add(new AutoRespawnModule());
+		modules.add(new AutoTotemModule());
 	}
 
 	public List<Module> getModules() {

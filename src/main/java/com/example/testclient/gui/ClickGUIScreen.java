@@ -17,18 +17,18 @@ public class ClickGUIScreen extends Screen {
 	private static final int ACCENT_DARK = 0xFF1F5FBF;
 	private static final int BG = 0xE0141420;
 	private static final int BG_HOVER = 0xE01E1E30;
-	private static final int W = 110;
+	private static final int W = 100;
 	private static final int HEADER = 16;
 	private static final int ROW = 14;
 
 	private static final Map<String, List<String>> CATEGORIES = new LinkedHashMap<>();
 
 	static {
-		CATEGORIES.put("Combat", List.of("KillAura"));
-		CATEGORIES.put("Movement", List.of("Fly", "Speed", "Sprint", "Step", "Glide", "HighJump", "AutoJump", "Spider", "NoFall"));
+		CATEGORIES.put("Combat", List.of("KillAura", "AutoClicker", "AutoTotem"));
+		CATEGORIES.put("Movement", List.of("Fly", "Speed", "Sprint", "Step", "Glide", "HighJump", "AutoJump", "AirJump", "Jetpack", "Spider", "NoFall", "AutoWalk"));
 		CATEGORIES.put("Render", List.of("Fullbright", "ESP", "BlockESP", "SoundESP", "Tracers"));
+		CATEGORIES.put("Player", List.of("AutoTool", "AutoRespawn", "AntiAFK"));
 		CATEGORIES.put("World", List.of("Scaffold"));
-		CATEGORIES.put("Misc", List.of("AntiAFK"));
 	}
 
 	private static final class Panel {
@@ -55,7 +55,7 @@ public class ClickGUIScreen extends Screen {
 			int x = 10;
 			for (Map.Entry<String, List<String>> e : CATEGORIES.entrySet()) {
 				panels.add(new Panel(e.getKey(), e.getValue(), x, 20));
-				x += W + 8;
+				x += W + 6;
 			}
 		}
 	}
