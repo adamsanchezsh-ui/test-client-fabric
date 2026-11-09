@@ -14,6 +14,8 @@ public class ModuleManager {
 		modules.add(new FullbrightModule());
 		modules.add(new SprintModule());
 		modules.add(new EspModule());
+		modules.add(new BlockEspModule());
+		modules.add(new SoundEspModule());
 		modules.add(new StepModule());
 		modules.add(new KillAuraModule());
 		modules.add(new NoFallModule());

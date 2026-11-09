@@ -6,6 +6,8 @@
   "key.testclient.fullbright": "Toggle Fullbright",
   "key.testclient.sprint": "Toggle Sprint",
   "key.testclient.esp": "Toggle ESP",
+  "key.testclient.blockesp": "Toggle BlockESP",
+  "key.testclient.soundesp": "Toggle SoundESP",
   "key.testclient.step": "Toggle Step",
   "key.testclient.killaura": "Toggle KillAura",
   "key.testclient.nofall": "Toggle NoFall",

@@ -2,6 +2,7 @@ package com.example.testclient;
 
 import com.example.testclient.gui.ClickGUIScreen;
 import com.example.testclient.modules.ModuleManager;
+import com.example.testclient.render.EspRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
@@ -17,6 +18,7 @@ public class TestClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		modules = new ModuleManager();
+		EspRenderer.init();
 		guiKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 				"key.testclient.gui",
 				InputUtil.Type.KEYSYM,
