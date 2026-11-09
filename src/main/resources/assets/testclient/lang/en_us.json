@@ -1,7 +1,10 @@
 {
   "category.testclient": "Test Client",
+  "key.testclient.gui": "Open Menu",
   "key.testclient.fly": "Toggle Fly",
   "key.testclient.speed": "Toggle Speed",
   "key.testclient.fullbright": "Toggle Fullbright",
-  "key.testclient.sprint": "Toggle Sprint"
+  "key.testclient.sprint": "Toggle Sprint",
+  "key.testclient.esp": "Toggle ESP",
+  "key.testclient.step": "Toggle Step"
 }

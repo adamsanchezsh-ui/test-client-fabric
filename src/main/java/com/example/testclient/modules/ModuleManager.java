@@ -13,6 +13,8 @@ public class ModuleManager {
 		modules.add(new SpeedModule());
 		modules.add(new FullbrightModule());
 		modules.add(new SprintModule());
+		modules.add(new EspModule());
+		modules.add(new StepModule());
 	}
 
 	public List<Module> getModules() {
