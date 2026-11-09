@@ -8,9 +8,14 @@
   "key.testclient.esp": "Toggle ESP",
   "key.testclient.blockesp": "Toggle BlockESP",
   "key.testclient.soundesp": "Toggle SoundESP",
+  "key.testclient.tracers": "Toggle Tracers",
   "key.testclient.step": "Toggle Step",
   "key.testclient.killaura": "Toggle KillAura",
   "key.testclient.nofall": "Toggle NoFall",
   "key.testclient.spider": "Toggle Spider",
-  "key.testclient.autojump": "Toggle AutoJump"
+  "key.testclient.autojump": "Toggle AutoJump",
+  "key.testclient.scaffold": "Toggle Scaffold",
+  "key.testclient.glide": "Toggle Glide",
+  "key.testclient.highjump": "Toggle HighJump",
+  "key.testclient.antiafk": "Toggle AntiAFK"
 }

@@ -16,11 +16,16 @@ public class ModuleManager {
 		modules.add(new EspModule());
 		modules.add(new BlockEspModule());
 		modules.add(new SoundEspModule());
+		modules.add(new TracersModule());
 		modules.add(new StepModule());
 		modules.add(new KillAuraModule());
 		modules.add(new NoFallModule());
 		modules.add(new SpiderModule());
 		modules.add(new AutoJumpModule());
+		modules.add(new ScaffoldModule());
+		modules.add(new GlideModule());
+		modules.add(new HighJumpModule());
+		modules.add(new AntiAfkModule());
 	}
 
 	public List<Module> getModules() {

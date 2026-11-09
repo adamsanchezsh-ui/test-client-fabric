@@ -24,6 +24,8 @@ public final class EspRenderer {
 				return;
 			}
 			Vec3d cam = ctx.camera().getPos();
+			Vec3d look = Vec3d.fromPolar(ctx.camera().getPitch(), ctx.camera().getYaw());
+			Vec3d start = cam.add(look.multiply(0.5));
 			MatrixStack ms = ctx.matrixStack();
 
 			BufferBuilder buf = null;
@@ -42,6 +44,21 @@ public final class EspRenderer {
 				ms.translate(-cam.x, -cam.y, -cam.z);
 				for (Box box : src.boxes()) {
 					WorldRenderer.drawBox(ms, buf, box, c[0], c[1], c[2], c[3]);
+				}
+				MatrixStack.Entry e = ms.peek();
+				for (Vec3d t : src.tracerTargets()) {
+					Vec3d d = t.subtract(start);
+					double len = d.length();
+					if (len < 1.0e-4) {
+						continue;
+					}
+					d = d.multiply(1.0 / len);
+					buf.vertex(e, (float) start.x, (float) start.y, (float) start.z)
+							.color(c[0], c[1], c[2], c[3])
+							.normal(e, (float) d.x, (float) d.y, (float) d.z);
+					buf.vertex(e, (float) t.x, (float) t.y, (float) t.z)
+							.color(c[0], c[1], c[2], c[3])
+							.normal(e, (float) d.x, (float) d.y, (float) d.z);
 				}
 				ms.pop();
 			}
