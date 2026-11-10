@@ -8,9 +8,11 @@ import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class ClickGUIScreen extends Screen {
 	public static final int ACCENT = 0xFF2F80FF;
@@ -24,9 +26,9 @@ public class ClickGUIScreen extends Screen {
 	private static final Map<String, List<String>> CATEGORIES = new LinkedHashMap<>();
 
 	static {
-		CATEGORIES.put("Combat", List.of("KillAura", "AutoClicker", "AutoTotem"));
+		CATEGORIES.put("Combat", List.of("KillAura", "AutoClicker", "AutoTotem", "Velocity", "Reach"));
 		CATEGORIES.put("Movement", List.of("Fly", "Speed", "Sprint", "Step", "Glide", "HighJump", "AutoJump", "AirJump", "Jetpack", "Spider", "NoFall", "AutoWalk"));
-		CATEGORIES.put("Render", List.of("Fullbright", "ESP", "BlockESP", "SoundESP", "Tracers"));
+		CATEGORIES.put("Render", List.of("Fullbright", "Xray", "Zoom", "ESP", "BlockESP", "SoundESP", "Tracers"));
 		CATEGORIES.put("Player", List.of("AutoTool", "AutoRespawn", "AntiAFK"));
 		CATEGORIES.put("World", List.of("Scaffold"));
 	}
@@ -52,10 +54,22 @@ public class ClickGUIScreen extends Screen {
 	public ClickGUIScreen() {
 		super(Text.literal("Test Client"));
 		if (panels.isEmpty()) {
+			Set<String> listed = new HashSet<>();
 			int x = 10;
 			for (Map.Entry<String, List<String>> e : CATEGORIES.entrySet()) {
+				listed.addAll(e.getValue());
 				panels.add(new Panel(e.getKey(), e.getValue(), x, 20));
 				x += W + 6;
+			}
+			// anything not listed above goes into an automatic Misc panel
+			List<String> rest = new ArrayList<>();
+			for (Module m : TestClient.modules.getModules()) {
+				if (!listed.contains(m.getName())) {
+					rest.add(m.getName());
+				}
+			}
+			if (!rest.isEmpty()) {
+				panels.add(new Panel("Misc", rest, x, 20));
 			}
 		}
 	}
